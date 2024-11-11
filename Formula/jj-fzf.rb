@@ -4,6 +4,8 @@ class JjFzf < Formula
   sha256 "6f4019423ec9ab93e80b7a4e0883ed6eac526a3a60fb332b937555c9c3f04628"
   version "0.22.0"
 
+  head "https://github.com/tim-janik/jj-fzf.git", branch: "trunk"
+
   depends_on "fzf"
   depends_on "jj"
   depends_on "bash"
