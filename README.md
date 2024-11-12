@@ -1,14 +1,15 @@
 # my homebrew tap
 
-## How do I install these formulae?
+## jj-fzf
 
-`brew install neongreen/tap/<formula>`
+Install:
 
-Or `brew tap neongreen/tap` and then `brew install <formula>`.
+```bash
+brew install neongreen/tap/jj-fzf
+```
 
-Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
+Or if you need the latest GitHub version:
 
-```ruby
-tap "neongreen/tap"
-brew "<formula>"
+```bash
+brew install neongreen/tap/jj-fzf --HEAD
 ```
