@@ -10,13 +10,14 @@ class JjFzf < Formula
   depends_on "fzf"
   depends_on "gawk"
   depends_on "gnu-sed"
+  depends_on "grep"
   depends_on "jj"
 
   def install
     bin.install "jj-fzf"
-    # https://github.com/tim-janik/jj-fzf/issues/2
     bin.env_script_all_files libexec, PATH: [
-      Formula["gnu-sed"].libexec/"gnubin",
+      Formula["gnu-sed"].libexec/"gnubin", # https://github.com/tim-janik/jj-fzf/issues/2
+      Formula["grep"].libexec/"gnubin",
       "$PATH",
     ].join(":")
   end
