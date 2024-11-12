@@ -1,8 +1,8 @@
 class JjFzf < Formula
   desc "Text UI for Jujutsu based on fzf"
   homepage "https://github.com/tim-janik/jj-fzf"
-  url "https://github.com/tim-janik/jj-fzf/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "6f4019423ec9ab93e80b7a4e0883ed6eac526a3a60fb332b937555c9c3f04628"
+  url "https://github.com/tim-janik/jj-fzf/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "2d31959743affabaac7eadba056b8e41c32050ff895c116529c004491f3136c8"
 
   head "https://github.com/tim-janik/jj-fzf.git", branch: "trunk"
 
@@ -14,9 +14,9 @@ class JjFzf < Formula
 
   def install
     bin.install "jj-fzf"
+    # https://github.com/tim-janik/jj-fzf/issues/2
     bin.env_script_all_files libexec, PATH: [
       Formula["gnu-sed"].libexec/"gnubin",
-      Formula["gawk"].libexec/"gnubin",
       "$PATH",
     ].join(":")
   end
